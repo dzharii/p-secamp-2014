@@ -17,6 +17,9 @@ using OpenQA.Selenium;
 #endregion
 namespace Demo.TestModel.PageDeclarations
 {
+    /// <summary>
+    /// Twitter Login Page
+    /// </summary>
     public class TwitterLoginPage : MyPageBase
     {
         #region WebElements
@@ -39,6 +42,11 @@ namespace Demo.TestModel.PageDeclarations
         #endregion
 
         #region Invoke() and IsDisplayed()
+
+        /// <summary>
+        ///  Opens Twitter Login Page by typing 
+        ///  URL into browser address box
+        /// </summary>
         public override void Invoke()
         {
             if (!IsDisplayed())
@@ -62,6 +70,10 @@ namespace Demo.TestModel.PageDeclarations
         }
 
 
+        /// <summary>
+        /// Logins to twitter with default Login and Password
+        /// Please, see Configuration file for Details
+        /// </summary>
         internal void Login()
         {
             txtLogin.Clear();

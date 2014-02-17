@@ -17,6 +17,12 @@ using OpenQA.Selenium.Interactions;
 #endregion
 namespace Demo.TestModel.PageDeclarations
 {
+    /// <summary>
+    /// Twitter Main page. Contains:
+    /// * User Tweet timeline
+    /// * Settings menu
+    /// * And other stuff
+    /// </summary>
     public class TwitterMainPage : MyPageBase
     {
         #region WebElements
@@ -31,6 +37,11 @@ namespace Demo.TestModel.PageDeclarations
         #endregion
 
         #region Invoke() and IsDisplayed()
+
+        /// <summary>
+        /// Opens Main Page if it was not oppened already 
+        /// 
+        /// </summary>
         public override void Invoke()
         {
             if (!IsDisplayed())

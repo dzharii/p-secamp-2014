@@ -16,6 +16,10 @@ using OpenQA.Selenium;
 #endregion
 namespace Demo.TestModel.PageDeclarations
 {
+    /// <summary>
+    /// MainPage - Settings - Account Page
+    /// First page on the Settings area
+    /// </summary>
     public class TwitterAccountPage : MyPageBase
     {
         #region WebElements
@@ -87,6 +91,9 @@ namespace Demo.TestModel.PageDeclarations
             VerifyElementVisible("lnkDeactivateMyAccount", lnkDeactivateMyAccount);
         }
 
+        /// <summary>
+        ///  Waits until the Account page is opened 
+        /// </summary>
         internal void WaitForOpen()
         {
             lnkDeactivateMyAccount.WaitUntilVisible(TimeSpan.FromSeconds(10));
